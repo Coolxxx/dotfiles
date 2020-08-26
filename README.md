@@ -1,2 +1,2 @@
  This is my configuation for mac.
- Include zsh, tmux
+ Include zsh, tmux, vim

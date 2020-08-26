@@ -1,0 +1,8 @@
+on run {input, parameters}
+	(* Your script goes here *)
+	tell application "Terminal"
+		reopen
+		do script ""
+		activate
+	end tell
+end run
