@@ -33,7 +33,7 @@ ZSH_THEME="robbyrussell"
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS=true
+# DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -73,17 +73,20 @@ ENABLE_AUTO_CD="true"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
 plugins=(git
-	zsh-syntax-highlighting
-	z
-	extract
-	zsh-autosuggestions
-    )
+    z
+    extract
+    zsh-syntax-highlighting
+    zsh-autosuggestions
+    zsh-completions
+    history-substring-search)
+
+autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
 
