@@ -13,6 +13,10 @@ set -ex
 # install wget
 brew install wget
 
+# install auto
+brew install autoconf
+brew install automake
+
 # install oh-my-zsh
 brew install zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -32,6 +36,10 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM
 
 # install tmux
 brew install tmux
+git clone https://github.com/gpakosz/.tmux.git ${HOME:-~}/.tmux
+ln -s -f ${HOME:-~}/.tmux/.tmux.conf ${HOME:-~}/
+cp ${HOME:-~}/.tmux/.tmux.conf.local ${HOME:-~}/
+
 brew install tmux-mem-cpu-load
 
 # install bash completion
