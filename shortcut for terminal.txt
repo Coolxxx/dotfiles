@@ -1,0 +1,15 @@
+(* This script is for mac to open terminal by keyboard shortcut *)
+(* Open Automator, select "Quick Action (or maybe called Services)", leftside choose "Run AppleScript", change "Service receives" from "text" to "no input" *)
+(* Paste the following script and save as "Open Terminal" *)
+(* Then assign a keyboard shortcut for the service from "System Preferences > Keyboard > Shortcuts > Services". *)
+(* Creating shortcut keys for other applications is also similar *)
+
+
+on run {input, parameters}
+	(* Your script goes here *)
+	tell application "Terminal"
+		reopen
+		do script ""
+		activate
+	end tell
+end run
