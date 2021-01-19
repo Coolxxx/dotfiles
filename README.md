@@ -1,7 +1,7 @@
 
 ## My Dotfiles
 
-### Vim
+### [Vim](https://github.com/vim/vim)
 
 - .vim/
 
@@ -19,7 +19,7 @@
 
     - Theme 
         
-        Default robbyrussell theme
+        - Default robbyrussell theme
 
     - Plugins
 
@@ -47,7 +47,7 @@
 
     - Theme
 
-        [Oh My Tmux](https://github.com/gpakosz/.tmux)
+        - [Oh My Tmux](https://github.com/gpakosz/.tmux)
 
     - Plugins
 
@@ -58,6 +58,7 @@
 
 - shortcut for terminal.txt
 
+    
     Shortcut for mac to open terminal
 
 - sublime_conf.json
