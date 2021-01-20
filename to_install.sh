@@ -7,45 +7,49 @@ set -ex
 # Sublime Text 3
 # Notion 
 
-# install Homebrew
+# install Homebrew for mac
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-# install wget
+# install wget using brew
 brew install wget
 
-# install auto
+# install auto using brew
 brew install autoconf
 brew install automake
 
-# install oh-my-zsh
+# install zsh using brew
 brew install zsh
+# install zsh using apt
+sudo apt install zsh
+
+# install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# install zsh plugins
+# install zsh plugins using brew
 brew install zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-
 brew install zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-
 brew install zsh-completions
-git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
-
 brew install zsh-history-substring-search
+# install zsh plugins using git
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
 
-# install tmux
+# install tmux using brew
 brew install tmux
+# install oh-my-tmux using git
 git clone https://github.com/gpakosz/.tmux.git ${HOME:-~}/.tmux
 ln -s -f ${HOME:-~}/.tmux/.tmux.conf ${HOME:-~}/
 cp ${HOME:-~}/.tmux/.tmux.conf.local ${HOME:-~}/
 
+# install tmux-mem-cpu-load using brew
 brew install tmux-mem-cpu-load
 
-# install bash completion
+# install bash completion using brew
 brew install bash-completion
 
-# install unrar
+# install unrar using brew
 brew install unrar
 
 # install python

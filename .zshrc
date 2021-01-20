@@ -42,7 +42,7 @@ ZSH_THEME="robbyrussell"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 
 # use "setopt" to see what has enable for you
 # use "emulate -lLR zsh" to see what is default option, use "emulate -LR zsh" to apply default option
