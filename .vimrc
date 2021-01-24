@@ -1,5 +1,11 @@
-" make syntax highlight
-syntax enable
+" vi improved usage
+set nocompatible
+
+" activates filetype detection
+filetype plugin indent on
+
+" activates syntax highlighting among other things
+syntax on
 
 " number of line
 set number
@@ -107,3 +113,12 @@ colorscheme solarized
 " vim rainbow parentheses
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
+"disable this plugin for cmake files
+let g:rainbow_conf = {
+    \   'separately': {
+    \       'ocaml': {
+    \           'parentheses': ['start=/(\*\@!/ end=/)/ fold'],
+    \       },
+    \       'cmake': 0,
+    \   }
+    \}

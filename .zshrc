@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+export ZSH="/home/xxx/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -33,7 +33,7 @@ ZSH_THEME="robbyrussell"
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
+# DISABLE_MAGIC_FUNCTIONS=true
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -42,16 +42,7 @@ ZSH_THEME="robbyrussell"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="false"
-
-# use "setopt" to see what has enable for you
-# use "emulate -lLR zsh" to see what is default option, use "emulate -LR zsh" to apply default option
-# use "setopt HIST_IGNORE_DUPS" to ignore duplicate history command.
-ENABLE_HIST_IGNORE_DUPS="true"
-# use "setopt HIST_FIND_NO_DUPS" to ignore duplicate history command when scanning.
-ENABLE_HIST_FIND_NO_DUPS="true"
-# use "setopt AUTO_CD" to enable cd dictory when only type dictory
-ENABLE_AUTO_CD="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -73,20 +64,17 @@ ENABLE_AUTO_CD="true"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-
-plugins=(git
-    z
-    extract
-    zsh-syntax-highlighting
-    zsh-autosuggestions
-    zsh-completions
-    history-substring-search)
-
-autoload -U compinit && compinit
+plugins=(
+	git
+	zsh-syntax-highlighting
+	z
+	extract
+	zsh-autosuggestions
+	)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -116,4 +104,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-
+# pyenv setting
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
